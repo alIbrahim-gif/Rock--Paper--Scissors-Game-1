@@ -1,24 +1,25 @@
 import random
 
-RPS = {
-    "rock" : 0,
-    "paper" : 1,
-    "scissors" : 2
-}
-Player = input()
+array = ["rock","paper","scissor"]
 
-ComputerChoice = random.choice(list(RPS.keys()))
-
-
-if ComputerChoice == "rock" and Player == "rock" or ComputerChoice == "paper" and Player == "paper" or ComputerChoice == "scissors" and Player == "scissors":
-  print("you are draw")
-  print(ComputerChoice)
-  
-  # computer win coditions
-if ComputerChoice == "rock" and Player == "scissors" or ComputerChoice == "scissors" and Player == "paper" or ComputerChoice == "paper" and Player == "rock":
-  print("you lose")
-  print(ComputerChoice)
-if Player == "rock" and ComputerChoice == "scissors" or Player == "scissors" and ComputerChoice == "paper" or Player == "paper" and ComputerChoice == "rock":
-  print("you win")
-  print(ComputerChoice)
-
+while True:
+    Computer_choice = random.choice(array)
+    
+    print(Computer_choice)
+    
+    user = input("Rock, Paper, Scissor: ").lower()
+    
+    if user == "cls" or user == "quit":
+        break
+    
+    elif user == "rock" and Computer_choice == "rock" or user == "paper" and Computer_choice == "paper" or user == "scissor" and Computer_choice == "scissor":
+        print("you are in draw")
+    
+    elif user == "rock" and Computer_choice == "scissor" or user == "paper" and Computer_choice == "rock" or user == "scissor" and Computer_choice == "paper":
+        print("you won 🤩🤩")
+    
+    elif user == "rock" and Computer_choice == "paper" or user == "paper" and Computer_choice == "scissor" or user == "scissor" and Computer_choice == "rock":
+        print("computer won 🤖🤖")
+    
+    else:
+        print("invalid syntax")
