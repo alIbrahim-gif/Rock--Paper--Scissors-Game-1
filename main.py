@@ -2,7 +2,7 @@ import random
 
 array = ["rock","paper","scissor"]
 
-while True:
+while Tr
     Computer_choice = random.choice(array)
     
     print(Computer_choice)
