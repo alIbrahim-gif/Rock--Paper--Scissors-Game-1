@@ -1,4 +1,4 @@
-import random
+
 
 array = ["rock","paper","scissor"]
 
